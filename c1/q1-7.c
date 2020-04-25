@@ -35,9 +35,9 @@ int main() {
     } else {
         printf ("Found %d\n", target);
     }
-    free(a);
-
     printf("%.3f sec\n", difftime(time(NULL), begin_time));
+
+    free(a);
     return 0;
 }
 

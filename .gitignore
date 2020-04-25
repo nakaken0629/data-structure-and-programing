@@ -52,9 +52,3 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-
-
-c1-1
-c1-2
-c1-3
-c1-4

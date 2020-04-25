@@ -1,4 +1,4 @@
-/* code: c1-2.c (v1.18.00) */
+/* code: q1-5.c */
 #include <stdio.h>
 
 int main() {

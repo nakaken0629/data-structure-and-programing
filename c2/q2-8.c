@@ -1,4 +1,4 @@
-/* code: c2-8.c (v1.18.0) */
+/* code: q2-8.c (v1.18.0) */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

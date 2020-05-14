@@ -40,7 +40,11 @@ int main() {
     queue_init(&front, &rear);
     /* ダミーでリングを一周させる */
     for(int i = 0; i < MAX; i++) {
-        enqueue(queue, front, &rear, 100);
+        int result = enqueue(queue, front, &rear, 100);
+        if (result < 0) {
+            printf("QUEUE is full\n");
+            exit(-1);
+        }
         dequeue(queue, &front, rear, &data);
     }
     enqueue(queue, front, &rear, 100);
@@ -49,12 +53,13 @@ int main() {
     enqueue(queue, front, &rear, 400);
     enqueue(queue, front, &rear, 500);
 
-    while (rear - front) {
+    while (rear - front >= 0) {
         stat = dequeue(queue, &front, rear, &data);
         if (stat == DEQUEUE_SUCCESS) {
             printf("%d (f:%d, r:%d)\n", data, front, rear);
         } else {
             printf("QUEUE is empty\n");
+            exit(-1);
         }
     }
 }
